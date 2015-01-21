@@ -1,0 +1,80 @@
+/*                          *\
+          Hero stylings
+\*                          */
+
+// These are the main stylings for the Hero block.
+// It's the main heading where you see all the images
+// To be snarky I'm calling it Giro.
+
+.page-section-giro {
+  width: 100%;
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.giro-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: tranlate(-50%, -50%);
+  opacity: 0;
+  transition-property: opacity .5s;
+}
+
+.giro-block {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  @media only screen and (min-width: 768px) {
+    width: 33.333%;
+  }
+  &:hover {
+    .project-img {
+    }
+    &:after {
+      opacity: .2;
+    }
+  }
+}
+.giro-block:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: .9;
+  transition: opacity .5s;
+}
+
+.giro-one:after {
+  background-color: $secondary-color;
+}
+
+.giro-two:after {
+  background-color: $blue;
+}
+
+.giro-three:after {
+  background-color: $steel;
+}
+
+.giro-four:after {
+  background-color: $steel;
+}
+
+.giro-five:after {
+  background-color: $tertiary-color;
+}
+
+.giro-six:after {
+  background-color: $primary-color;
+}

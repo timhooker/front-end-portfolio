@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.page-header {
+  background-image: url("../img/halftone.png");
+  padding-bottom: 2em;
+  text-align: center;
+  position: relative;
+  /* making some modifications to the logo and layout in
+  the header as the page grows */
+
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+    .page-header-logo {
+      width: 16.666%;
+      margin-left: 8.333%;
+
+    }
+  }
+  // A nice little gradient effect
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $white-fade;
+  }
+}
+.page-section {
+  padding: 2em;
+  display: block;
+}
+
+.page-section-content {
+  max-width: 1180px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 500;
+}
+
+.page-section-primary {
+  background-color: $primary-color;
+  color: $tertiary-color;
+}
+
+.page-section-secondary {
+  text-align: right;
+  background-image: url("../img/halftone.png");
+
+}
+
+.page-section-tertiary {
+  background-color: $tertiary-color;
+  background-image: url("../img/halftone-opacity.png");
+}
+
+.page-footer {
+  padding: 1em;
+  background-color: $secondary-color;
+  color: #fff;
+}
+
+.page-header-logo {
+  width: 50%;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+}
+
+.project-image-wrapper {
+  width: 100%;
+  display: inline-block;
+}
+.project-about {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+  padding: 1em;
+}
