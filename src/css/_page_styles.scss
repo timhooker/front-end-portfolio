@@ -75,6 +75,8 @@
 .project-img {
   width: 100%;
   height: auto;
+  transform: scale(1.05, 1.05);
+  transition: transform .6s;
 }
 
 .project-image-wrapper {
